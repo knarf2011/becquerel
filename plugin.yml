@@ -1,0 +1,24 @@
+name: Project Becquerel
+main: knarf2011.becquerel.Becquerel
+version: 1.0.2.0
+description: Heavily modifies the game experience; randomly assigns each player a new name upon spawn and respawn, eliminates static world spawnpoint, and more.
+
+commands:
+  yell:
+    description: Scream at the top of your lungs! (4x audible radius from normal chat)
+    usage: /yell [message]
+    permission: becquerel.yell
+    permission-message: You can't yell!
+  bechelp:
+    description: View crucial information on survival in Project Becquerel.
+    usage: /bechelp [page]
+    permission: becquerel.help
+    permission-message: You don't have permission to view help. Genuine apologies from PJ Bec's developers.
+
+permissions:
+  becquerel.yell:
+    description: Allows you to yell.
+    default: true
+  becquerel.help:
+    description: Allows you to view help and changelogs.
+    default: true

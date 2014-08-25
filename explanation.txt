@@ -2,7 +2,7 @@ This server is using Project Becquerel, a plugin designed to enhance the realism
 Use /bechelp to view crucial information on survival in this modified game.
 ==>
 If you have any questions or concerns about Project Becquerel, please comment on the plugin's
-page on Bukkit's website: 
+GitHub page: https://github.com/knarf2011/becquerel
 ==>
 As you may have noticed, you spawn with three wooden tools in your inventory.
 This is because Project Becquerel simulates Minecraft 1.7's implementation of the adventure game mode:

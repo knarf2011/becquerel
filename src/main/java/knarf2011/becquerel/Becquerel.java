@@ -120,10 +120,10 @@ public class Becquerel extends JavaPlugin
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) 
     {
+    	Player p = (Player)sender;
+		PlayerDataV1 pd = players.get(p.getUniqueId());
     	if (cmd.getName().equalsIgnoreCase("yell") && (sender instanceof Player)) //handle /yell command
     	{
-    		Player p = (Player)sender;
-    		PlayerDataV1 pd = players.get(p.getUniqueId());
     		long timeToYell = (pd.countYellsSince(System.currentTimeMillis()-600000)*500+1000)-pd.timeSinceYell();
     		if(timeToYell<=0)
     		{

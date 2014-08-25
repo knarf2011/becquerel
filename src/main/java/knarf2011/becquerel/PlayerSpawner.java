@@ -62,7 +62,7 @@ public final class PlayerSpawner implements Listener
 	
 	public void giveBasicItems(Player p)
 	{
-		p.setGameMode(GameMode.ADVENTURE);
+		p.setGameMode(GameMode.SURVIVAL);
 		PlayerInventory i = p.getInventory();
 		ItemStack picaxe = new ItemStack(Material.WOOD_PICKAXE,1,(short) 57);
 		ItemStack axe = new ItemStack(Material.WOOD_AXE,1,(short) 57);

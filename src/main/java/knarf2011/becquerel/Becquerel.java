@@ -40,6 +40,7 @@ public class Becquerel extends JavaPlugin
 		getServer().getPluginManager().registerEvents(new PlayerConsume(), this);
 		getServer().getPluginManager().registerEvents(new PlayerChat(), this);
 		getServer().getPluginManager().registerEvents(new BlockRedstone(), this);
+		getServer().getPluginManager().registerEvents(new BlockBreak(), this);
 		getServer().getPluginManager().registerEvents(new CreatureSpawn(), this);
 		getServer().getPluginManager().registerEvents(new EntityHealthRegen(), this);
 		//Initialize modified health regeneration

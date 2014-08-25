@@ -10,7 +10,7 @@ commands:
     permission: becquerel.yell
     permission-message: You can't yell!
   bechelp:
-    description: View crucial information on survival in Project Becquerel.
+    description: View crucial information on survival on servers using Project Becquerel.
     usage: /bechelp [page]
     permission: becquerel.help
     permission-message: You don't have permission to view help. Genuine apologies from PJ Bec's developers.

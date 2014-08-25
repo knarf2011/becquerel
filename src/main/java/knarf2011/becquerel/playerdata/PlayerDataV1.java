@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 import knarf2011.becquerel.namegen.NameGenerator;
 
-public class PlayerDataV1 implements Serializable
+public class PlayerDataV1 implements Serializable //DO NOT CHANGE THIS CLASS FOR ANY REASON!!!
 {
 	/**
 	 * 

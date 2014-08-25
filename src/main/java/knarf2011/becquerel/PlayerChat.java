@@ -16,6 +16,7 @@ import org.bukkit.event.player.PlayerQuitEvent;
 
 public class PlayerChat implements Listener
 {
+	//TODO: write a versatile method for ranged messages. This is ridiculous.
 	@EventHandler(priority = EventPriority.HIGHEST)
 	public void onPlayerQuit(PlayerQuitEvent event)
 	{

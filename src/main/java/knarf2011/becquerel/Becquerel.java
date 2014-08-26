@@ -29,6 +29,12 @@ public class Becquerel extends JavaPlugin
 	public ShapedRecipe bedrockRecipe = new ShapedRecipe(new ItemStack(Material.BEDROCK, 2)).shape("oco","coc","oco")
 			.setIngredient('o', Material.OBSIDIAN).setIngredient('c', Material.COBBLESTONE);
 	
+	public ShapedRecipe slimeballRecipe = new ShapedRecipe(new ItemStack(Material.SLIME_BALL, 4)).shape("dl","ld")
+			.setIngredient('d', Material.INK_SACK).setIngredient('l', Material.WATER_LILY);
+
+	public ShapedRecipe cobwebRecipe = new ShapedRecipe(new ItemStack(Material.WEB, 2)).shape("sss","sbs","sss")
+			.setIngredient('s', Material.STRING).setIngredient('b', Material.SLIME_BALL);
+	
 	@Override //when the plugin is enabled. NOTE: not necessarily when server is starting; players may already be online.
     public void onEnable()
 	{
@@ -46,8 +52,11 @@ public class Becquerel extends JavaPlugin
 		//Initialize modified health regeneration
 		EntityHealthRegen.initRegen();
 		
-		//add crafting recipe for bedrock, as defined above.
+		//add crafting recipe for bedrock, slimeballs, and string, as defined above.
 		getServer().addRecipe(bedrockRecipe);
+		getServer().addRecipe(slimeballRecipe);
+		getServer().addRecipe(cobwebRecipe);
+
 		
 		getLogger().info("Loading player data...");
 		//Start of player data loading process. TODO: sometime, implement .PROPERTIES format for better portability.

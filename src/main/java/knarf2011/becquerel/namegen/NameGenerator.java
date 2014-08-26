@@ -23,7 +23,7 @@ public class NameGenerator
 							ie,ie,new NameElement(null,new String[]{"o","a","er","or","","","",""})
 						},new String[]{"bb","nn","nk","dd","t","tt","pp","ck","ll"}), ie
 					},new String[]{"o","a","i"})
-			},new String[]{"F","Fr","H","B","Y"})
+			},new String[]{"F","Fr","H","B","Y","C"})
 	};
 	
 	public static String getName()

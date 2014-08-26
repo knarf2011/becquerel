@@ -1,0 +1,48 @@
+This server is using Project Becquerel, a plugin designed to enhance the realism of Minecraft.
+Use /bechelp to view crucial information on survival in this modified game.
+==>
+If you have any questions or concerns about Project Becquerel, please comment on the plugin's
+GitHub page: https://github.com/knarf2011/becquerel
+==>
+As you may have noticed, you spawn with three wooden tools in your inventory.
+This is because Project Becquerel simulates Minecraft 1.7's implementation of the adventure game mode:
+you can only break blocks using the proper tools - for example, you need an axe to collect wood.
+Your pickaxe and axe have three uses each, and your shovel has twelve.
+If you die, you will always respawn with these tools again.
+==>
+Spawning and respawning are very different on servers using Project Becquerel.
+On a normal server, there is a world spawnpoint that you always spawn on.
+On servers using Project Becquerel,
+you can respawn anywhere in the world that is within 125 blocks of another player!
+This still applies if you have slept in a bed; bed respawns are disabled by Project Becquerel.
+If you are the only player online when you die, there is quite frankly no telling where you will respawn;
+the world spawnpoint is moved by 500 blocks every time it's used.
+==>
+Healing is also differenton servers using Project Becquerel.
+It takes thirty seconds to regain half a heart, plus thirty additional seconds for every drumstick of hunger.
+This means it takes half a day cycle to reheal completely at full nutrition, and five and a half day cycles at empty.
+As you can imagine this makes food a major survival concern. You must have access to a plentiful supply at all times.
+We made this more difficult by reducing creature spawns by 66%. Fortunately, this also applies to hostile mobs.
+==>
+Project Becquerel makes a series of changes to the game to prevent you from keeping your identity between lives.
+That is, when you respawn you are now a completely different player and nobody will recognize you.
+Project Becquerel randomly assigns each player a nickname using a name-generation algorithm.
+This nickname changes every time you die and respawn, but not when you log out and log back in.
+Project Becquerel implements no way to customize this nickname, and to the developers' knowledge,
+all attempts to do so have resulted in corrupted player data.
+Information on nicknames is continued in the next section of Project Becquerel Help.
+==>
+The nickname replaces your name in the chat, as well as the tag above your head.
+As a result, almost everyone will have the Steve skin, although they are able to see their own.
+The nickname generator may occasionally give undesirable names. Please inform the plugin
+developers if you or another player receives a profane nickname.
+==>
+Project Becquerel implements ways to manipulate bedrock.
+Firstly, there is a crafting recipe for it, following this pattern:
+oco
+coc
+oco
+where 'o' represents a block of obsidean and 'c' represents a block of cobblestone.
+The recipe yields two blocks of bedrock.
+You can also break bedrock by placing a diamond block next to it and giving the diamond block redstone power.
+==x

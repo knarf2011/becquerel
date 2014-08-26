@@ -31,9 +31,25 @@ public class Becquerel extends JavaPlugin
 	
 	public ShapedRecipe slimeballRecipe = new ShapedRecipe(new ItemStack(Material.SLIME_BALL, 4)).shape("dl","ld")
 			.setIngredient('d', Material.INK_SACK).setIngredient('l', Material.WATER_LILY);
-
+	
+	public ShapedRecipe saddleRecipe = new ShapedRecipe(new ItemStack(Material.SADDLE, 2)).shape("lll","l l")
+			.setIngredient('l', Material.LEATHER);
+	
 	public ShapedRecipe cobwebRecipe = new ShapedRecipe(new ItemStack(Material.WEB, 2)).shape("sss","sbs","sss")
 			.setIngredient('s', Material.STRING).setIngredient('b', Material.SLIME_BALL);
+	
+	public ShapedRecipe chainmailhelmetRecipe = new ShapedRecipe(new ItemStack(Material.CHAINMAIL_HELMET, 2)).shape("fff","f f")
+			.setIngredient('f', Material.FLINT);
+	
+	public ShapedRecipe chainmailchestplateRecipe = new ShapedRecipe(new ItemStack(Material.CHAINMAIL_CHESTPLATE, 2)).shape("f f","fff","fff")
+			.setIngredient('f', Material.FLINT);
+
+	public ShapedRecipe chainmailleggingsRecipe = new ShapedRecipe(new ItemStack(Material.CHAINMAIL_LEGGINGS, 2)).shape("fff","f f","f f")
+			.setIngredient('f', Material.FLINT);
+	
+	public ShapedRecipe chainmailbootsRecipe = new ShapedRecipe(new ItemStack(Material.CHAINMAIL_BOOTS, 2)).shape("f f","f f")
+			.setIngredient('f', Material.FLINT);
+
 	
 	@Override //when the plugin is enabled. NOTE: not necessarily when server is starting; players may already be online.
     public void onEnable()
@@ -56,6 +72,11 @@ public class Becquerel extends JavaPlugin
 		getServer().addRecipe(bedrockRecipe);
 		getServer().addRecipe(slimeballRecipe);
 		getServer().addRecipe(cobwebRecipe);
+		getServer().addRecipe(chainmailhelmetRecipe);
+		getServer().addRecipe(chainmailchestplateRecipe);
+		getServer().addRecipe(chainmailleggingsRecipe);
+		getServer().addRecipe(chainmailbootsRecipe);
+
 
 		
 		getLogger().info("Loading player data...");

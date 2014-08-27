@@ -23,7 +23,7 @@ public class BlockBreak implements Listener
 		ItemStack hi = p.getItemInHand();
 		Block b = event.getBlock();
 		int requiredTool = 0; try{requiredTool = breakables.get(b.getType());}catch(Exception e){}
-		if(requiredTool == 0)
+		if(requiredTool == 1 || (requiredTool==0 && !(b.getDrops(hi).isEmpty())))
 			return;
 		int usedTool = 0; try{usedTool = tools.get(hi.getType());}catch(Exception e){}
 		if(requiredTool == usedTool)
@@ -35,6 +35,7 @@ public class BlockBreak implements Listener
 	{
 		Material[][] mats = new Material[][]
 		{
+				{},
 				{}, //this makes checking stuff a lot easier
 				{Material.WOOD_AXE,Material.GOLD_AXE,Material.STONE_AXE,Material.IRON_AXE,Material.DIAMOND_AXE},
 				{Material.WOOD_PICKAXE,Material.GOLD_PICKAXE,Material.STONE_PICKAXE,Material.IRON_PICKAXE,Material.DIAMOND_PICKAXE},
@@ -57,20 +58,20 @@ public class BlockBreak implements Listener
 	{
 		Material[][] mats =  new Material[][]
 		{
-				{ //No tool
-					/*
+				{}, //this makes checking stuff a lot easier
+				{
 					Material.LEAVES,
-					Material.BED,
-					Material.WORKBENCH,
 					Material.CROPS,
 					Material.LONG_GRASS,
-					Material.DEAD_BUSH  //*/
+					Material.DEAD_BUSH,
+					Material.FIRE
 				},
 				{ //Axe
 					Material.LOG,
 					Material.WOOD_PLATE,
 					Material.WOOD_STEP,
-					Material.WOOD_STAIRS
+					Material.WOOD_STAIRS,
+					Material.CACTUS
 				},
 				{ //Pickaxe
 					

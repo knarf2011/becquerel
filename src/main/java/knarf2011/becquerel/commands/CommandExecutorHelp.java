@@ -47,10 +47,11 @@ public class CommandExecutorHelp implements CommandExecutor
     			String[] newRet = new String[ret.length+1];
     			for(int i=0; i<ret.length; i++)
     				newRet[i]=ret[i];
+    			newRet[ret.length]="";
     			ret=newRet;
     		}
     		else
-    			ret[ret.length-1]+=ln+"\n";
+    			ret[ret.length-1]+=ln+" ";
     	}
     	s.close();
     	return ret;

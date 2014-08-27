@@ -22,10 +22,10 @@ public class BlockBreak implements Listener
 		Player p = event.getPlayer();
 		ItemStack hi = p.getItemInHand();
 		Block b = event.getBlock();
-		int requiredTool = breakables.get(b.getType());
+		int requiredTool = 0; try{requiredTool = breakables.get(b.getType());}catch(Exception e){}
 		if(requiredTool == 0)
 			return;
-		int usedTool = tools.get(hi.getType());
+		int usedTool = 0; try{usedTool = tools.get(hi.getType());}catch(Exception e){}
 		if(requiredTool == usedTool)
 			return;
 		event.setCancelled(true);

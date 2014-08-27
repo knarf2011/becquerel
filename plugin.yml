@@ -1,6 +1,6 @@
 name: Project Becquerel
 main: knarf2011.becquerel.Becquerel
-version: 1.0.2.0
+version: 1.0.2.1
 description: Heavily modifies the game experience; randomly assigns each player a new name upon spawn and respawn, eliminates static world spawnpoint, and more.
 
 commands:

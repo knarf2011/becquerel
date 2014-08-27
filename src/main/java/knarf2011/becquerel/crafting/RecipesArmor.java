@@ -8,16 +8,16 @@ import knarf2011.becquerel.crafting.RecipeManager.Recipes;
 
 public class RecipesArmor implements Recipes
 {
-	public ShapedRecipe chainmailhelmetRecipe = new ShapedRecipe(new ItemStack(Material.CHAINMAIL_HELMET, 2)).shape("fff","f f")
+	public ShapedRecipe chainmailhelmetRecipe = new ShapedRecipe(new ItemStack(Material.CHAINMAIL_HELMET, 1)).shape("fff","f f")
 			.setIngredient('f', Material.FLINT);
 	
-	public ShapedRecipe chainmailchestplateRecipe = new ShapedRecipe(new ItemStack(Material.CHAINMAIL_CHESTPLATE, 2)).shape("f f","fff","fff")
+	public ShapedRecipe chainmailchestplateRecipe = new ShapedRecipe(new ItemStack(Material.CHAINMAIL_CHESTPLATE, 1)).shape("f f","fff","fff")
 			.setIngredient('f', Material.FLINT);
 
-	public ShapedRecipe chainmailleggingsRecipe = new ShapedRecipe(new ItemStack(Material.CHAINMAIL_LEGGINGS, 2)).shape("fff","f f","f f")
+	public ShapedRecipe chainmailleggingsRecipe = new ShapedRecipe(new ItemStack(Material.CHAINMAIL_LEGGINGS, 1)).shape("fff","f f","f f")
 			.setIngredient('f', Material.FLINT);
 	
-	public ShapedRecipe chainmailbootsRecipe = new ShapedRecipe(new ItemStack(Material.CHAINMAIL_BOOTS, 2)).shape("f f","f f")
+	public ShapedRecipe chainmailbootsRecipe = new ShapedRecipe(new ItemStack(Material.CHAINMAIL_BOOTS, 1)).shape("f f","f f")
 			.setIngredient('f', Material.FLINT);
 	
 	public void registerRecipes(RecipeManager rm)

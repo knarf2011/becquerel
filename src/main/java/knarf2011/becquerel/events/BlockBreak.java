@@ -13,27 +13,25 @@ import org.bukkit.inventory.ItemStack;
 
 public class BlockBreak implements Listener
 {
-	public HashMap<Integer, Integer> breakables = initBreakables();
-	public HashMap<Integer, Integer> tools = initTools();
+	public HashMap<Material, Integer> breakables = initBreakables();
+	public HashMap<Material, Integer> tools = initTools();
 	
-	@SuppressWarnings("deprecation")
 	@EventHandler(priority = EventPriority.HIGHEST)
 	public void onBlockBreak(BlockBreakEvent event)
 	{
 		Player p = event.getPlayer();
 		ItemStack hi = p.getItemInHand();
 		Block b = event.getBlock();
-		int requiredTool = breakables.get(b.getType().getId());
+		int requiredTool = breakables.get(b.getType());
 		if(requiredTool == 0)
 			return;
-		int usedTool = tools.get(hi.getType().getId());
+		int usedTool = tools.get(hi.getType());
 		if(requiredTool == usedTool)
 			return;
 		event.setCancelled(true);
 	}
 	
-	@SuppressWarnings("deprecation")
-	public HashMap<Integer, Integer> initTools()
+	public HashMap<Material, Integer> initTools()
 	{
 		Material[][] mats = new Material[][]
 		{
@@ -43,20 +41,19 @@ public class BlockBreak implements Listener
 				{Material.WOOD_SPADE,Material.GOLD_SPADE,Material.STONE_SPADE,Material.IRON_SPADE,Material.DIAMOND_SPADE}
 		};
 		
-		HashMap<Integer,Integer> ret = new HashMap<Integer,Integer>();
+		HashMap<Material,Integer> ret = new HashMap<Material,Integer>();
 		for(int i1=0; i1<mats.length; i1++)
 		{
 			Material[] a = mats[i1];
 			for(int i2=0; i2<a.length; i2++)
 			{
-				ret.put(a[i2].getId(), i1);
+				ret.put(a[i2], i1);
 			}
 		}
 		return ret;
 	}
 	
-	@SuppressWarnings("deprecation")
-	public HashMap<Integer, Integer> initBreakables()
+	public HashMap<Material, Integer> initBreakables()
 	{
 		Material[][] mats =  new Material[][]
 		{
@@ -86,13 +83,13 @@ public class BlockBreak implements Listener
 				}
 		};
 		
-		HashMap<Integer,Integer> ret = new HashMap<Integer,Integer>();
+		HashMap<Material,Integer> ret = new HashMap<Material,Integer>();
 		for(int i1=0; i1<mats.length; i1++)
 		{
 			Material[] a = mats[i1];
 			for(int i2=0; i2<a.length; i2++)
 			{
-				ret.put(a[i2].getId(), i1);
+				ret.put(a[i2], i1);
 			}
 		}
 		return ret;

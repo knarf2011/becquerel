@@ -1,4 +1,6 @@
-package knarf2011.becquerel;
+package knarf2011.becquerel.events;
+
+import knarf2011.becquerel.Becquerel;
 
 import org.bukkit.Location;
 import org.bukkit.Material;

@@ -1,7 +1,8 @@
-package knarf2011.becquerel;
+package knarf2011.becquerel.events;
 
 import java.util.Random;
 
+import knarf2011.becquerel.Becquerel;
 import knarf2011.becquerel.playerdata.PlayerDataV1;
 
 import org.bukkit.Bukkit;

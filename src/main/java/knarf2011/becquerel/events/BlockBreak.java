@@ -1,4 +1,4 @@
-package knarf2011.becquerel;
+package knarf2011.becquerel.events;
 
 import java.util.HashMap;
 
@@ -16,6 +16,7 @@ public class BlockBreak implements Listener
 	public HashMap<Integer, Integer> breakables = initBreakables();
 	public HashMap<Integer, Integer> tools = initTools();
 	
+	@SuppressWarnings("deprecation")
 	@EventHandler(priority = EventPriority.HIGHEST)
 	public void onBlockBreak(BlockBreakEvent event)
 	{
@@ -31,6 +32,7 @@ public class BlockBreak implements Listener
 		event.setCancelled(true);
 	}
 	
+	@SuppressWarnings("deprecation")
 	public HashMap<Integer, Integer> initTools()
 	{
 		Material[][] mats = new Material[][]
@@ -53,6 +55,7 @@ public class BlockBreak implements Listener
 		return ret;
 	}
 	
+	@SuppressWarnings("deprecation")
 	public HashMap<Integer, Integer> initBreakables()
 	{
 		Material[][] mats =  new Material[][]

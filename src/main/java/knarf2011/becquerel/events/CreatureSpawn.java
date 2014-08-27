@@ -1,4 +1,4 @@
-package knarf2011.becquerel;
+package knarf2011.becquerel.events;
 
 import java.util.Random;
 

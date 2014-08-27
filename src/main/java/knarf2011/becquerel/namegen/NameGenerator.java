@@ -29,7 +29,10 @@ public class NameGenerator
 	public static String getName()
 	{
 		Random r = new Random();
-		return getName(start[r.nextInt(start.length)], r);
+		String ret = getName(start[r.nextInt(start.length)], r);
+		if(ret.startsWith("Fap"))
+			return getName();
+		return ret;
 	}
 	
 	public static String getName(NameElement e, Random r)

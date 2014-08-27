@@ -25,9 +25,12 @@ public class BlockBreak implements Listener
 		int requiredTool = 0; try{requiredTool = breakables.get(b.getType());}catch(Exception e){}
 		if(requiredTool == 1 || (requiredTool==0 && !(b.getDrops(hi).isEmpty())))
 			return;
-		int usedTool = 0; try{usedTool = tools.get(hi.getType());}catch(Exception e){}
-		if(requiredTool == usedTool)
-			return;
+		if(requiredTool!=0)
+		{
+			int usedTool = 0; try{usedTool = tools.get(hi.getType());}catch(Exception e){}
+			if(requiredTool == usedTool)
+				return;
+		}
 		event.setCancelled(true);
 	}
 	
@@ -64,13 +67,16 @@ public class BlockBreak implements Listener
 					Material.CROPS,
 					Material.LONG_GRASS,
 					Material.DEAD_BUSH,
-					Material.FIRE
+					Material.FIRE,
 				},
 				{ //Axe
 					Material.LOG,
-					Material.WOOD_PLATE,
 					Material.WOOD_STEP,
 					Material.WOOD_STAIRS,
+					Material.BIRCH_WOOD_STAIRS,
+					Material.WOOD_DOUBLE_STEP,
+					Material.JUNGLE_WOOD_STAIRS,
+					Material.SPRUCE_WOOD_STAIRS,
 					Material.CACTUS
 				},
 				{ //Pickaxe

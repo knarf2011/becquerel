@@ -8,11 +8,11 @@ import org.bukkit.inventory.ShapelessRecipe;
 
 public class RecipesMaterials implements Recipes
 {
-	public ShapelessRecipe slimeballRecipeG = new ShapelessRecipe(new ItemStack(Material.SLIME_BALL, 1))
+	public ShapelessRecipe slimeballRecipeG = new ShapelessRecipe(new ItemStack(Material.SLIME_BALL, 2))
 			.addIngredient(Material.LONG_GRASS).addIngredient(Material.INK_SACK);
-	public ShapelessRecipe slimeballRecipe = new ShapelessRecipe(new ItemStack(Material.SLIME_BALL, 1))
+	public ShapelessRecipe slimeballRecipe = new ShapelessRecipe(new ItemStack(Material.SLIME_BALL, 2))
 			.addIngredient(Material.LEAVES).addIngredient(Material.INK_SACK);
-	public ShapelessRecipe slimeballRecipeL = new ShapelessRecipe(new ItemStack(Material.SLIME_BALL, 1))
+	public ShapelessRecipe slimeballRecipeL = new ShapelessRecipe(new ItemStack(Material.SLIME_BALL, 2))
 			.addIngredient(Material.WATER_LILY).addIngredient(Material.INK_SACK);
 
 	public void registerRecipes(RecipeManager rm)

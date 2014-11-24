@@ -54,6 +54,6 @@ public class Becquerel extends JavaPlugin
     	getLogger().info("Saving player data...");
     	PDLoaderV1.savePlayerData(players);
     	//This is no longer the instance being used; set the instance variable to null so garbage collection can get it.
-    	instance = null;
+    	instance = null;	//this is no longer the instance; there is no instance.
     }
 }
